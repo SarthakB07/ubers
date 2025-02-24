@@ -1,4 +1,5 @@
 import React from 'react'
+
 const VehiclePanel = (props) => {
     return (
         <div>
@@ -6,7 +7,7 @@ const VehiclePanel = (props) => {
                 props.setVehiclePanel(false)
             }}><i className="text-3xl text-gray-200 ri-arrow-down-wide-line"></i></h5>
             <h3 className='text-2xl font-semibold mb-5'>Choose a Vehicle</h3>
-            <div onClick={()=>{
+            <div onClick={() => {
                 props.setConfirmRidePanel(true)
                 props.selectVehicle('car')
             }} className='flex border-2 active:border-black  mb-2 rounded-xl w-full p-3  items-center justify-between'>
@@ -18,7 +19,7 @@ const VehiclePanel = (props) => {
                 </div>
                 <h2 className='text-lg font-semibold'>₹{props.fare.car}</h2>
             </div>
-            <div onClick={()=>{
+            <div onClick={() => {
                 props.setConfirmRidePanel(true)
                 props.selectVehicle('moto')
             }} className='flex border-2 active:border-black mb-2 rounded-xl w-full p-3  items-center justify-between'>
@@ -30,7 +31,7 @@ const VehiclePanel = (props) => {
                 </div>
                 <h2 className='text-lg font-semibold'>₹{props.fare.moto}</h2>
             </div>
-            <div onClick={()=>{
+            <div onClick={() => {
                 props.setConfirmRidePanel(true)
                 props.selectVehicle('auto')
             }} className='flex border-2 active:border-black mb-2 rounded-xl w-full p-3  items-center justify-between'>
@@ -45,4 +46,5 @@ const VehiclePanel = (props) => {
         </div>
     )
 }
+
 export default VehiclePanel
